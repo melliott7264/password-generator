@@ -80,7 +80,9 @@ if (digitChars) {
 // use a for loop to build the password array using the input array (mainArray) and the selected password character length
 var passwordArray = [];
 for ( i=0; i < numChars; i++) {
+  // randomly select a position in the array of possible characters
   var charPosition = Math.floor(Math.random() * mainArray.length);
+  // use the array position to populate the password array with the selected character
   passwordArray[i] = mainArray[charPosition];
 
 }// concatenate the passwordArray into a string
@@ -102,7 +104,8 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
-// *************** End Assignment Provided Code *****************
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// *************** End Assignment Provided Code *****************
