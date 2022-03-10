@@ -1,12 +1,3 @@
-// Link javascript to generate button on index.html 
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input on index.html
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-}
 
 // *************************************************************
 //                    Generate Password Function
@@ -92,11 +83,26 @@ for ( i=0; i < numChars; i++) {
   var charPosition = Math.floor(Math.random() * mainArray.length);
   passwordArray[i] = mainArray[charPosition];
 
-}// concatenate the passwordArray into a string and pass back to the writePassword function
+}// concatenate the passwordArray into a string
   passwordString = passwordArray.join('');
-  return passwordString;
-}
+
 // *********************** End of Password Array **************************
-  
+
+return passwordString; // return the password string to the calling function
+} // ******************* End of Generate Password Function ****************
+
+// **************** Assignment Provided Code **********************
+
+// Link javascript to generate button on index.html 
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input on index.html
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+}
+// *************** End Assignment Provided Code *****************
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
