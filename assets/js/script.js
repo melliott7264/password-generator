@@ -7,7 +7,7 @@ var generatePassword = function () {
 // ********************** Input Section ************************
 
 // get the number of desired characters in the password
-var numChars = window.prompt("How many characters do you want in your password? (8 to 128)");
+var numChars = window.prompt("How many characters do you want in your password? Enter 8 to 128 and Click Ok.");
 
 // while loop checking for Not a Number and numbers not between 8 and 128
 while (isNaN(numChars) || numChars < 8 || numChars > 128) {
@@ -19,25 +19,25 @@ var checkFlag = false;
   
 while (!checkFlag) {
   // does the user want lowercase characters
-  var lowerChars = window.confirm("Do you want to include lowercase characters in your password?");
+  var lowerChars = window.confirm("Do you want to include lowercase characters in your password?  Click Ok for Yes, Cancel for No.");
   if (lowerChars) {
     checkFlag = true;
   } 
   
   // does the user want uppercase characters in their password
-  var upperChars = window.confirm("Do you want to include uppercase characters in your password?");
+  var upperChars = window.confirm("Do you want to include uppercase characters in your password?  Click Ok for Yes, Cancel for No.");
   if (upperChars) {
     checkFlag = true;
   } 
   
   // does the user want special characters in their password
-  var specialChars = window.confirm("Do you want to include special characters in your password?");
+  var specialChars = window.confirm("Do you want to include special characters in your password?  Click Ok for Yes, Cancel for No.");
   if (specialChars) {
     checkFlag = true;
   } 
   
   // does the user want numbers in their password
-  var digitChars = window.confirm("Do you want to include numbers in your password?");
+  var digitChars = window.confirm("Do you want to include numbers in your password?  Click Ok for Yes, Cancel for No.");
   if (digitChars) {
     checkFlag = true;
   } 
